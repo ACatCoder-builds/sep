@@ -4,19 +4,24 @@ SEP (Search Embedded, Print) is a CLI tool that reads =stdin=, parses the text a
 
 ** Installation
 SEP is not yet on any package managers. Make sure you have cargo installed, type
-~ # todo ~
+
+= https://github.com/ACatCoder-builds/sep.git =
+
 Then type:
-~ # cargo build --release ~
+
+= # cargo build --release =
+
 The executable is available under =./target/release/sep= and can be used as follows:
-~ ./target/release/sep <ARGS> ~
+
+= ./target/release/sep <ARGS> =
 
 *NOTE*: We will use =sep= instead of =./target/release/sep= for the rest of this document. If you wish to copy lines, replace =sep= with the path of the executable (=target/release/sep=)
 
 ** Usage
 Suppose you have a text file called =cat_test.txt=. To find =What do cats eat?=, use:
-~ cat cat_test.txt | sep "What do cats eat?" ~
+= cat cat_test.txt | sep "What do cats eat?" =
 If you want to write the output to a file called =result.txt=, do:
-~ cat cat_test.txt | sep "What do cats eat?" -r > result.txt ~ 
+= cat cat_test.txt | sep "What do cats eat?" -r > result.txt =
 The `r` flag removes the color from the outputs, which does not look as good in the terminal, but it means there are no "special" characters in the file that would control the character.
 
 ** Goals

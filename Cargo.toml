@@ -3,6 +3,7 @@ name = "sep"
 version = "0.1.0"
 edition = "2024"
 description = "Find a query in a text (stdin) by embedding"
+repository = "https://github.com/ACatCoder-builds/sep/"
 license = "Apache 2.0"
 keywords = ["cli"]
 categories = ["command-line-utilities"]

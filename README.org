@@ -5,7 +5,7 @@ SEP (Search Embedded, Print) is a CLI tool that reads =stdin=, parses the text a
 ** Installation
 SEP is not yet on any package managers. Make sure you have cargo installed, type
 
-~https://github.com/ACatCoder-builds/sep.git~
+~git clone https://github.com/ACatCoder-builds/sep.git~
 
 Then type:
 

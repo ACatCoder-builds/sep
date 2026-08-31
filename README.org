@@ -19,10 +19,13 @@ The executable is available under =./target/release/sep= and can be used as foll
 
 ** Usage
 Suppose you have a text file called =cat_test.txt=. To find =What do cats eat?=, use:
+
 ~cat cat_test.txt | sep "What do cats eat?"~
+
 If you want to write the output to a file called =result.txt=, do:
 ~cat cat_test.txt | sep "What do cats eat?" -r > result.txt~
-The `r` flag removes the color from the outputs, which does not look as good in the terminal, but it means there are no "special" characters in the file that would control the character.
+
+The `r` flag removes the color from the outputs, which does not look as good in the terminal, but it means there are no "special" characters in the file that would control the color.
 
 ** Goals
 

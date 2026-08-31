@@ -1,0 +1,16 @@
+[package]
+name = "sep"
+version = "0.1.0"
+edition = "2024"
+description = "Find a query in a text (stdin) by embedding"
+license = "Apache 2.0"
+keywords = ["cli"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+anyhow = "1.0.104"
+clap = { version = "4.6.6", features = ["derive"] }
+crossterm = "0.29.0"
+fastembed = "6.0.0"
+regex = "1.13.1"
+

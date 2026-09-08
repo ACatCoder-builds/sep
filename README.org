@@ -3,7 +3,21 @@
 SEP (Search Embedded, Print) is a CLI tool that reads =stdin=, parses the text and embeds a query and the text to find a specific chunk that is closest to the query. The project is not vibecoded.
 
 ** Installation
-SEP is not yet on any package managers. Make sure you have cargo installed, type
+
+*** Ubuntu/Debian
+
+Go to [[https://acatcoder-builds.github.io/project-downloads/sep_0.1.0-1_amd64.deb][this link]] to download the =.deb= file.
+Next, open a terminal. Use ~cd~ to go to the directory in which your file is located. To install, type:
+
+~apt install <filename>~
+
+Replace =<filename>= with the name of your file, currently: =https://acatcoder-builds.github.io/project-downloads/sep_0.1.0-1_amd64.deb=.
+
+*** Building from source
+
+For windows and other linux operating systems, you need to build from source. Make sure you have cargo installed, type
+
+*NOTE*: This will not create the =man= page!
 
 ~git clone https://github.com/ACatCoder-builds/sep.git~
 

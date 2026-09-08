@@ -9,7 +9,7 @@ SEP (Search Embedded, Print) is a CLI tool that reads =stdin=, parses the text a
 Go to [[https://acatcoder-builds.github.io/project-downloads/sep_0.1.0-1_amd64.deb][this link]] to download the =.deb= file.
 Next, open a terminal. Use ~cd~ to go to the directory in which your file is located. To install, type:
 
-~apt install <filename>~
+~sudo apt install ./<filename>~
 
 Replace =<filename>= with the name of your file, currently: =https://acatcoder-builds.github.io/project-downloads/sep_0.1.0-1_amd64.deb=.
 
@@ -25,9 +25,9 @@ Then type:
 
 ~cargo build --release~
 
-The executable is available under =./target/release/sep= and can be used as follows:
+The executable is available under =./target/release/sep= on linux systems and can be used as follows:
 
-~./target/release/sep <ARGS>~
+~./target/release/sep <ARGS>~ 
 
 *NOTE*: We will use =sep= instead of =./target/release/sep= for the rest of this document. If you wish to copy lines, replace =sep= with the path of the executable (=target/release/sep=)
 

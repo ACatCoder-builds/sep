@@ -26,8 +26,8 @@ use clap::Parser;
 /// errors that may occur.
 fn main() {    
     if let Err(e) = run() {
-	println!("sep: {e}");
-	exit(1);
+		println!("sep: {e}");
+		exit(1);
     }
 }
 
@@ -67,18 +67,18 @@ fn run() -> Result<()> {
     let mut text = Vec::new();
     stdin().read_to_end(&mut text)?;
     let text = chunk(
-	&String::from_utf8(text)?,
-	args.punct_threshold
+		&String::from_utf8(text)?,
+		args.punct_threshold
     );
     
     let time = Instant::now();
     
     let mut model = TextEmbedding::try_new(
-	TextInitOptions::new(args.model)
+		TextInitOptions::new(args.model)
     )?;
 
     if !args.raw {
-	println!("Currently embedding, this may take a while. :)");
+		println!("Currently embedding, this may take a while. :)");
     }
     
     let text_embedding = model.embed(&text, None)?;
@@ -92,11 +92,11 @@ fn run() -> Result<()> {
     println!("Embedded succesfully in {:?}", time.elapsed());
     
     for (i, result) in results {
-	if args.raw {
-	    println!("{}: {}%\n", text[i], result * 100.);   
-	} else {
-	    println!("{}: {}%\n", text[i], color_percentages(result * 100.));   
-	}
+		if args.raw {
+	    	println!("{}: {}%\n", text[i], result * 100.);   
+		} else {
+	   		println!("{}: {}%\n", text[i], color_percentages(result * 100.));   
+		}
     }
     
     Ok(())
@@ -195,27 +195,27 @@ fn chunk(input: &str, punct_threshold: f64) -> Vec<String> {
     // Check for periods followed by 2 spaces.
     if (pattern.split(input).count() as f64 / dots as f64) < punct_threshold {
 	
-	let mut prev = vec![];
+		let mut prev = vec![];
 
 	
-	for i in sentences {
+		for i in sentences {
 	    
-	    if prev.len() <= 1 {
-		prev.push(i);
-		continue;
-	    }
+	    	if prev.len() <= 1 {
+				prev.push(i);
+				continue;
+	    	}
 
 	    
-	    if prev.len() > 1 {
-		out.push(format!("{}.  {}.  {}", prev[prev.len() - 2], prev[prev.len() -1], i));
-		prev.remove(0);
-	    }
+	    	if prev.len() > 1 {
+				out.push(format!("{}.  {}.  {}", prev[prev.len() - 2], prev[prev.len() -1], i));
+				prev.remove(0);
+	    	}
 
-	    prev.push(i);
+	    	prev.push(i);
 
-	}
+		}
 	
-	return out;
+		return out;
     }
 
     // Check for dot followed by 1 space as fallback.
@@ -229,17 +229,17 @@ fn chunk(input: &str, punct_threshold: f64) -> Vec<String> {
     let mut prev = vec![];
     
     for i in sentences {
-	if prev.len() <= 1 {
-	    prev.push(i);
-	    continue;
-	}
+		if prev.len() <= 1 {
+	    	prev.push(i);
+	    	continue;
+		}
 	
-	if prev.len() > 1 {
-	    out.push(format!("{}.  {}.  {}", prev[prev.len() - 2], prev[prev.len() -1], i));
-	    prev.remove(0);
-	}
+		if prev.len() > 1 {
+	    	out.push(format!("{}.  {}.  {}", prev[prev.len() - 2], prev[prev.len() -1], i));
+	    	prev.remove(0);
+		}
 
-	prev.push(i);
+		prev.push(i);
 
     }
     

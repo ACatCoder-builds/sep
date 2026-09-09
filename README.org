@@ -47,7 +47,7 @@ SEP's goal is to become a utility for researching where you can find where somet
 
 ** Contributing
 
-You are able to find the inner workings documented in a `rustdoc` page [[https://acatcoder-builds.github.io/web/docs/sep/sep/][here]].
+You are able to find the inner workings documented in a =rustdoc= page [[https://acatcoder-builds.github.io/web/docs/sep/sep/][here]].
 
 We enforce following rules onto PRs and the project as a whole:
 
